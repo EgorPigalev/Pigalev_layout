@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Разработка макета</string>
+    <string name="textBottomPart">Product of <b>Team Name</b></string>
+    <string name="textNextRegistration">Dont’ have an account? Let’s <b>Register</b></string>
+    <string name="textNextAuthhorization">Already registered ?Let’s <b>Login</b></string>
+    <string name="textPersonalDate">I agree with terms &amp; conditions</string>
+</resources>
