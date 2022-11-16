@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 public class Authorization extends AppCompatActivity {
 
-    ImageView image;
+    ImageView image, imageCheked;
     EditText textPassword, textEmailOrPhone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Authorization extends AppCompatActivity {
         image = findViewById(R.id.ivVisiblePassword);
         textEmailOrPhone = findViewById(R.id.textEmailOrPhone);
         textPassword = findViewById(R.id.textPassword);
+        imageCheked = findViewById(R.id.cbRememberPassword);
         textPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         textEmailOrPhone.setOnFocusChangeListener((v, hasFocus) -> {
@@ -53,5 +54,17 @@ public class Authorization extends AppCompatActivity {
     public void nextRegistraation(View v)
     {
         startActivity(new Intent(this, Registration.class));
+    }
+    public void CheckedIm(View v)
+    {
+        if(imageCheked.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.check_box_not_active).getConstantState())
+        {
+            imageCheked.setImageResource(R.drawable.check_box_active);
+        }
+        else
+        {
+            imageCheked.setImageResource(R.drawable.check_box_not_active);
+        }
+
     }
 }

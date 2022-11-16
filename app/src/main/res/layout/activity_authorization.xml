@@ -83,10 +83,14 @@
             app:layout_constraintEnd_toEndOf="@+id/clFildsInput"
             app:layout_constraintTop_toBottomOf="@+id/clFildsInput" />
 
-        <CheckBox
+        <ImageView
             android:id="@+id/cbRememberPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="CheckedIm"
+            android:src="@drawable/check_box_not_active"
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/forgetPassword" />
@@ -98,6 +102,7 @@
             android:text="Remember Password"
             android:textColor="#935B34"
             android:textSize="14dp"
+            android:layout_marginLeft="15dp"
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
             app:layout_constraintStart_toEndOf="@+id/cbRememberPassword"
             app:layout_constraintTop_toBottomOf="@+id/forgetPassword" />
@@ -109,7 +114,7 @@
             android:background="@drawable/button_style"
             android:text="Login"
             android:textAllCaps="false"
-            android:textColor="#935B34"
+            android:textColor="@drawable/button_text_color"
             android:textSize="17dp"
             app:layout_constraintBottom_toTopOf="@+id/textOR"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,7 +142,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/button_style"
             android:text="GOOGLE"
-            android:textColor="#935B34"
+            android:textColor="@drawable/button_text_color"
             android:textSize="14dp"
             android:layout_marginBottom="30dp"
             app:layout_constraintEnd_toStartOf="@id/btnNextFacebook"
@@ -152,7 +157,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_style"
             android:text="FACEBOOK"
-            android:textColor="#935B34"
+            android:textColor="@drawable/button_text_color"
             android:textSize="14dp"
             android:layout_marginBottom="30dp"
             app:layout_constraintEnd_toEndOf="parent"

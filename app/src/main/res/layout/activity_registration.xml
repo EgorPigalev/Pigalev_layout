@@ -31,7 +31,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textHeader"
-            app:layout_constraintBottom_toTopOf="@+id/cbRememberPassword">
+            app:layout_constraintBottom_toTopOf="@+id/imRememberPassword">
 
             <EditText
                 android:id="@+id/etFIO"
@@ -105,10 +105,14 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <CheckBox
-            android:id="@+id/cbRememberPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imRememberPassword"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="CheckedIm"
+            android:src="@drawable/check_box_not_active"
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clFildsInput" />
@@ -120,8 +124,9 @@
             android:text="@string/textPersonalDate"
             android:textColor="#935B34"
             android:textSize="14dp"
+            android:layout_marginLeft="15dp"
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-            app:layout_constraintStart_toEndOf="@+id/cbRememberPassword"
+            app:layout_constraintStart_toEndOf="@+id/imRememberPassword"
             app:layout_constraintTop_toBottomOf="@+id/clFildsInput" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -132,12 +137,12 @@
             android:onClick="nextRegistrarion"
             android:text="Register"
             android:textAllCaps="false"
-            android:textColor="#935B34"
+            android:textColor="@drawable/button_text_color"
             android:textSize="17dp"
             app:layout_constraintBottom_toTopOf="@+id/textOR"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cbRememberPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/imRememberPassword" />
 
         <TextView
             android:id="@+id/textOR"
@@ -160,7 +165,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/button_style"
             android:text="GOOGLE"
-            android:textColor="#935B34"
+            android:textColor="@drawable/button_text_color"
             android:textSize="14dp"
             app:layout_constraintEnd_toStartOf="@id/btnNextFacebook"
             app:layout_constraintStart_toStartOf="parent"
@@ -174,7 +179,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_style"
             android:text="FACEBOOK"
-            android:textColor="#935B34"
+            android:textColor="@drawable/button_text_color"
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnNextGoogle"
